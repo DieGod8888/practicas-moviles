@@ -1,0 +1,670 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Marca</title>
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    
+    <style>
+        /* Hover negro solo en la barra roja */
+        .navbar.navbar-dark[style*="background-color: #c00"] .navbar-nav .nav-link:hover,
+        .navbar.navbar-dark[style*="background-color: #c00"] .navbar-nav .nav-link:focus {
+            background-color: #111 !important;
+            color: #fff !important;
+        }
+
+        /* Mostrar dropdown solo al pasar el mouse en la barra roja */
+        .navbar.navbar-dark[style*="background-color: #c00"] .navbar-nav .dropdown:hover .dropdown-menu {
+            display: block;
+            margin-top: 0;
+        }
+
+        .navbar.navbar-dark[style*="background-color: #c00"] .navbar-nav .dropdown-menu {
+            border-radius: 0 0 0.5rem 0.5rem;
+            margin-top: 0;
+        }
+
+        /* Ajuste de imágenes */
+        .logo-marca img {
+            height: 50px;
+            max-height: 56px;
+        }
+
+        .btn-escudo img {
+            height: 28px;
+            width: auto;
+        }
+
+        /* Artículo principal */
+        .main-article img {
+            height: 40vh;
+            object-fit: cover;
+        }
+
+        @media (max-width: 768px) {
+            .main-article img {
+                height: 250px;
+            }
+        }
+
+        /* Sidebar */
+        .sidebar img {
+            width: 90px;
+            height: 65px;
+            object-fit: cover;
+        }
+
+        /* Estilos adicionales para mejorar la presentación */
+        .header-btn {
+            color: #111;
+            background: none !important;
+            box-shadow: none !important;
+            outline: none !important;
+        }
+        
+        .badge-champions {
+            background: #007bff;
+            top: 15px;
+            left: 15px;
+        }
+        
+        .agenda-btn {
+            background-color: #d6001c;
+            color: white;
+        }
+        
+        .footer-links a {
+            font-size: 0.8rem;
+        }
+        
+        .social-icon {
+            opacity: 0.8;
+        }
+    </style>
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+    <div class="flex-grow-1">
+        <!-- HEADER -->
+        <header>
+            <div class="container-fluid px-0">
+                <!-- Barra principal -->
+                <div class="pt-2 px-2 px-md-5 pb-3">
+                    <div class="row align-items-center">
+                        <!-- Columna izquierda: enlaces adicionales (solo desktop) -->
+                        <div class="col-xl-4 col-lg-3 d-none d-lg-flex align-items-center">
+                            <button class="btn btn-link p-0 mr-2 header-btn">
+                                <img src="IMG/portada.jpg" width="28" height="28" class="img-fluid rounded" alt="Portada">
+                            </button>
+                            <button class="btn btn-link font-weight-bold mr-2 d-none d-xl-inline header-btn" style="font-size: 0.85rem;">
+                                La portada de hoy
+                            </button>
+                            <div class="border-left mx-2 d-none d-xl-block" style="height: 28px;"></div>
+                            <button class="btn btn-link p-0 mr-2 header-btn">
+                                <img src="IMG/radioMarca.png" width="28" height="28" class="img-fluid" alt="Radio MARCA">
+                            </button>
+                            <button class="btn btn-link font-weight-bold mr-2 d-none d-xl-inline header-btn" style="font-size: 0.85rem;">
+                                Radio MARCA
+                            </button>
+                            <div class="border-left mx-2 d-none d-xl-block" style="height: 28px;"></div>
+                            <button class="btn btn-link p-0 mr-2 header-btn">
+                                <img src="IMG/ligafantasy.png" width="28" height="28" class="img-fluid" alt="CuídatePlus">
+                            </button>
+                            <button class="btn btn-link font-weight-bold d-none d-xl-inline header-btn" style="font-size: 0.85rem;">
+                                La liga FANTASY MARCA
+                            </button>
+                        </div>
+
+                        <!-- Columna central: logo MARCA -->
+                        <div class="col-12 col-lg-6 col-xl-4 d-flex justify-content-center">
+                            <button class="btn btn-link p-0 logo-marca header-btn">
+                                <img src="IMG/marca.png" height="48" alt="MARCA" class="d-block d-md-none">
+                                <img src="IMG/marca.png" height="56" alt="MARCA" class="d-none d-md-block">
+                            </button>
+                        </div>
+
+                        <!-- Columna derecha: botones de usuario -->
+                        <div class="col-12 col-lg-3 col-xl-4 d-flex justify-content-center justify-content-lg-end align-items-center mt-2 mt-lg-0 header-buttons">
+                            <button class="btn border mr-1 mr-md-2 d-flex align-items-center justify-content-center" style="min-width: 40px; height: 36px;">
+                                <span class="d-inline d-sm-none">ES</span>
+                                <span class="d-none d-sm-inline">ES</span>
+                            </button>
+                            <button class="btn btn-outline-warning font-weight-bold mr-1 mr-md-2 px-2 px-md-3" style="height: 36px;">
+                                <span style="color: #d6001c;">SUSCRIBETE</span>
+                            </button>
+                            <button class="btn border font-weight-bold px-2 px-md-3 d-flex align-items-center" style="height: 36px;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-person" viewBox="0 0 16 16">
+                                    <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM2 14s-1 0-1-1 1-4 7-4 7 3 7 4-1 1-1 1H2z" />
+                                </svg>
+                                <span class="ml-1 d-none d-sm-inline btn-text">Iniciar sesión</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Barra de navegación secundaria con menús desplegables -->
+        <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #c00;">
+            <div class="container px-2 px-md-0">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" 
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto w-100 d-flex flex-column flex-lg-row justify-content-center">
+                        <li class="nav-item dropdown px-1 px-lg-2">
+                            <a class="nav-link dropdown-toggle font-weight-bold text-white" href="#" id="futbolDropdown"
+                                role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Fútbol</a>
+                            <div class="dropdown-menu" aria-labelledby="futbolDropdown">
+                                <a class="dropdown-item" href="#">LaLiga EA Sports</a>
+                                <a class="dropdown-item" href="#">LaLiga Hypermotion</a>
+                                <a class="dropdown-item" href="#">Champions League</a>
+                                <a class="dropdown-item" href="#">Europa League</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown px-1 px-lg-2">
+                            <a class="nav-link dropdown-toggle font-weight-bold text-white" href="#" id="baloncestoDropdown"
+                                role="button" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false">Baloncesto</a>
+                            <div class="dropdown-menu" aria-labelledby="baloncestoDropdown">
+                                <a class="dropdown-item" href="#">Liga Endesa</a>
+                                <a class="dropdown-item" href="#">NBA</a>
+                                <a class="dropdown-item" href="#">Euroliga</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown px-1 px-lg-2">
+                            <a class="nav-link dropdown-toggle font-weight-bold text-white" href="#" id="motorDropdown"
+                                role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Motor</a>
+                            <div class="dropdown-menu" aria-labelledby="motorDropdown">
+                                <a class="dropdown-item" href="#">Fórmula 1</a>
+                                <a class="dropdown-item" href="#">MotoGP</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown px-1 px-lg-2">
+                            <a class="nav-link dropdown-toggle font-weight-bold text-white" href="#"
+                                id="polideportivoDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false">Polideportivo</a>
+                            <div class="dropdown-menu" aria-labelledby="polideportivoDropdown">
+                                <a class="dropdown-item" href="#">Tenis</a>
+                                <a class="dropdown-item" href="#">Ciclismo</a>
+                                <a class="dropdown-item" href="#">Atletismo</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown px-1 px-lg-2">
+                            <a class="nav-link dropdown-toggle font-weight-bold text-white" href="#" id="cochesDropdown"
+                                role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Coches</a>
+                            <div class="dropdown-menu" aria-labelledby="cochesDropdown">
+                                <a class="dropdown-item" href="#">Actualidad</a>
+                                <a class="dropdown-item" href="#">Pruebas</a>
+                            </div>
+                        </li>
+                        <li class="nav-item px-1 px-lg-2">
+                            <a class="nav-link font-weight-bold text-white" href="#">Última hora</a>
+                        </li>
+                        <li class="nav-item px-1 px-lg-2">
+                            <a class="nav-link font-weight-bold text-white" href="#">Fantasy</a>
+                        </li>
+                        <li class="nav-item px-1 px-lg-2">
+                            <a class="nav-link font-weight-bold text-white" href="#">Agenda TV</a>
+                        </li>
+                        <li class="nav-item dropdown px-1 px-lg-2">
+                            <a class="nav-link dropdown-toggle font-weight-bold text-white" href="#" id="masDropdown"
+                                role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Más +</a>
+                            <div class="dropdown-menu" aria-labelledby="masDropdown">
+                                <a class="dropdown-item" href="#">E-Sports</a>
+                                <a class="dropdown-item" href="#">Golf</a>
+                                <a class="dropdown-item" href="#">Otros deportes</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Barra de escudos -->
+        <div class="bg-light border-bottom">
+            <div class="container d-flex flex-wrap justify-content-center py-2 overflow-auto">
+                <button class="btn btn-link p-0 mx-1 mx-md-2 btn-escudo"><img src="IMG/1alavés.png" alt="Alaves"></button>
+                <button class="btn btn-link p-0 mx-1 mx-md-2 btn-escudo"><img src="IMG/2athleticclub.png" alt="Athletic Club"></button>
+                <button class="btn btn-link p-0 mx-1 mx-md-2 btn-escudo"><img src="IMG/3atleticomadrid.png" alt="Atlético de Madrid"></button>
+                <button class="btn btn-link p-0 mx-1 mx-md-2 btn-escudo"><img src="IMG/4barcelona.png" alt="Barcelona"></button>
+                <button class="btn btn-link p-0 mx-1 mx-md-2 btn-escudo"><img src="IMG/5betis.png" alt="Betis"></button>
+                <button class="btn btn-link p-0 mx-1 mx-md-2 btn-escudo"><img src="IMG/6celtavigo.png" alt="Celta de Vigo"></button>
+                <button class="btn btn-link p-0 mx-1 mx-md-2 btn-escudo"><img src="IMG/7elche.png" alt="Elche"></button>
+                <button class="btn btn-link p-0 mx-1 mx-md-2 btn-escudo"><img src="IMG/8Espanyol.png" alt="Espanyol"></button>
+                <button class="btn btn-link p-0 mx-1 mx-md-2 btn-escudo"><img src="IMG/9getafe.png" alt="Getafe"></button>
+                <button class="btn btn-link p-0 mx-1 mx-md-2 btn-escudo"><img src="IMG/10girona.png" alt="Girona"></button>
+                <button class="btn btn-link p-0 mx-1 mx-md-2 btn-escudo"><img src="IMG/11levante.png" alt="Levante"></button>
+                <button class="btn btn-link p-0 mx-1 mx-md-2 btn-escudo"><img src="IMG/12mallorca.png" alt="Mallorca"></button>
+                <button class="btn btn-link p-0 mx-1 mx-md-2 btn-escudo"><img src="IMG/13osasuna.png" alt="Osasuna"></button>
+                <button class="btn btn-link p-0 mx-1 mx-md-2 btn-escudo"><img src="IMG/14oviedo.png" alt="Oviedo"></button>
+                <button class="btn btn-link p-0 mx-1 mx-md-2 btn-escudo"><img src="IMG/15vallecano.png" alt="Rayo Vallecano"></button>
+                <button class="btn btn-link p-0 mx-1 mx-md-2 btn-escudo"><img src="IMG/16realmadrid.png" alt="Real Madrid"></button>
+                <button class="btn btn-link p-0 mx-1 mx-md-2 btn-escudo"><img src="IMG/17realsociedad.png" alt="Real Sociedad"></button>
+                <button class="btn btn-link p-0 mx-1 mx-md-2 btn-escudo"><img src="IMG/18sevilla.png" alt="Sevilla"></button>
+                <button class="btn btn-link p-0 mx-1 mx-md-2 btn-escudo"><img src="IMG/19valencia.png" alt="Valencia"></button>
+                <button class="btn btn-link p-0 mx-1 mx-md-2 btn-escudo"><img src="IMG/20villareal.png" alt="Villarreal"></button>
+            </div>
+        </div>
+
+        <!-- Banner superior -->
+        <div class="text-center py-3">
+            <img src="IMG/publicaliente.jpg" alt="Publicidad" class="img-fluid">
+        </div>
+
+        <!-- Barra Agenda -->
+        <div class="container py-3">
+            <div class="row align-items-center">
+                <div class="col-12 col-md-9 d-flex flex-wrap align-items-center mb-3 mb-md-0">
+                    <h5 class="fw-bold mr-md-4">Agenda</h5>
+                    <a href="#" class="btn btn-sm text-white mr-2 mb-2 agenda-btn">En directo</a>
+                    <a href="#" class="btn btn-sm btn-light border mr-2 mb-2">Todas las noticias <br><small>Última hora</small></a>
+                    <a href="#" class="btn btn-sm text-white mr-2 mb-2 agenda-btn">Lo mejor del día</a>
+                    <a href="#" class="btn btn-sm btn-light border mb-2">Agenda <br><small>Jueves 23</small></a>
+                </div>
+                <div class="col-12 col-md-3 text-center text-md-right">
+                    <a href="#" class="small">Ver más directos ▾</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sección principal -->
+        <div class="container-fluid">
+            <div class="row no-gutters">
+                <!-- Noticia principal -->
+                <div class="col-12 col-lg-8 px-2 px-md-4 main-article">
+                    <div class="position-relative mb-4">
+                        <img src="IMG/champions.avif" alt="Champions League" class="img-fluid w-100">
+                        <span class="badge position-absolute badge-champions">CHAMPIONS</span>
+                        <div class="position-absolute w-100 h-100 d-flex align-items-end"
+                            style="top:0; left:0; background:linear-gradient(transparent, rgba(0,0,0,0.7));">
+                            <div class="text-white p-4">
+                                <h2 class="font-weight-bold mb-3">¿Cuál es el mejor once para reinar en Europa?</h2>
+                                <p class="mb-3">Descubre a los ocho grandes favoritos</p>
+                                <div class="d-flex justify-content-between small">
+                                    <span>RUBÉN JIMÉNEZ ENRIQUE MEDINA</span>
+                                    <span>💬 468</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <div class="col-lg-4 bg-light px-4 py-4 sidebar">
+                    <!-- Artículo -->
+                    <div class="media mb-4 pb-3 border-bottom">
+                        <img src="IMG/huelga.avif" alt="Huelga" class="rounded mr-3">
+                        <div class="media-body">
+                            <span class="badge badge-primary mb-1">LALIGA SANTANDER</span>
+                            <h6 class="font-weight-bold mb-1">Amenaza de huelga</h6>
+                            <p class="small text-muted mb-1">A. MEGOLLA Y F. BORJA</p>
+                            <div class="text-right"><span class="text-danger small">💬 306</span></div>
+                        </div>
+                    </div>
+
+                    <div class="media mb-4 pb-3 border-bottom">
+                        <img src="IMG/recambio.jpg" alt="Recambio" class="rounded mr-3">
+                        <div class="media-body">
+                            <span class="badge badge-primary mb-1">FICHAJES</span>
+                            <h6 class="font-weight-bold mb-1">Mercado: el 'recambio' de Filipe Luis puede llegar de Alemania</h6>
+                            <div class="text-right"><span class="text-danger small">💬 52</span></div>
+                        </div>
+                    </div>
+
+                    <div class="media">
+                        <img src="IMG/portero.webp" alt="Portero" class="rounded mr-3">
+                        <div class="media-body">
+                            <span class="badge badge-primary mb-1">REAL MADRID</span>
+                            <h6 class="font-weight-bold mb-1">Champions y Liga para el portero titular</h6>
+                            <p class="small text-muted mb-1">JOSÉ FÉLIX DÍAZ</p>
+                            <div class="text-right"><span class="text-danger small">💬 206</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contenido principal -->
+        <section class="container-fluid px-4 py-4">
+            <!-- Primera fila de noticias principales -->
+            <div class="row">
+                <!-- Primera noticia - Felix Orode -->
+                <div class="col-lg-4 col-md-4 col-sm-12 mb-3">
+                    <div class="card border-0 h-100 d-flex flex-column">
+                        <div class="position-relative">
+                            <img src="/IMG/images.jpg" class="card-img-top" alt="Felix Orode"
+                                style="height: 220px; object-fit: cover; border-radius: 0;">
+                            <span class="badge position-absolute px-2 py-1"
+                                style="top: 8px; left: 8px; background-color: #007bff; color: white; font-size: 0.7rem; font-weight: bold;">FÚTBOL</span>
+                        </div>
+                        <div class="card-body p-3 d-flex flex-column flex-grow-1">
+                            <h5 class="card-title font-weight-bold mb-2 text-dark"
+                                style="font-size: 1rem; line-height: 1.2;">
+                                Felix Orode, el jugador nigeriano que explica el festejo de Dele Alli
+                            </h5>
+                            <div class="mt-auto">
+                                <hr class="my-2" style="border-color: #ddd;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Segunda noticia - Cristiano -->
+                <div class="col-lg-4 col-md-4 col-sm-12 mb-3">
+                    <div class="card border-0 h-100 d-flex flex-column">
+                        <div class="position-relative">
+                            <img src="IMG/22.jpg" class="card-img-top" alt="Cristiano"
+                                style="height: 220px; object-fit: cover; border-radius: 0;">
+                            <span class="badge position-absolute px-2 py-1"
+                                style="top: 8px; left: 8px; background-color: #17a2b8; color: white; font-size: 0.7rem; font-weight: bold;">SERIE
+                                A</span>
+                        </div>
+                        <div class="card-body p-3 d-flex flex-column flex-grow-1">
+                            <h5 class="card-title font-weight-bold mb-2 text-dark"
+                                style="font-size: 1rem; line-height: 1.2;">
+                                Cristiano habla sobre Cuadrado y la cesión del número 7
+                            </h5>
+                            <div class="mt-auto">
+                                <p class="text-muted mb-0" style="font-size: 0.8rem;">REDACCIÓN MARCA CLARO</p>
+                                <hr class="my-2" style="border-color: #ddd;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tercera noticia - La joya celeste -->
+                <div class="col-lg-4 col-md-4 col-sm-12 mb-3">
+                    <div class="card border-0 h-100 d-flex flex-column">
+                        <div class="position-relative">
+                            <img src="/IMG/23.jpg" class="card-img-top" alt="La joya celeste"
+                                style="height: 220px; object-fit: cover; border-radius: 0;">
+                            <span class="badge position-absolute px-2 py-1"
+                                style="top: 8px; left: 8px; background-color: #dc3545; color: white; font-size: 0.7rem; font-weight: bold;">MÉXICO</span>
+                        </div>
+                        <div class="card-body p-3 d-flex flex-column flex-grow-1">
+                            <h5 class="card-title font-weight-bold mb-2 text-dark"
+                                style="font-size: 1rem; line-height: 1.2;">
+                                La joya celeste que hace soñar a Cruz Azul
+                            </h5>
+                            <div class="mt-auto">
+                                <p class="text-muted mb-0" style="font-size: 0.8rem;">JAVIER CARDOSO</p>
+                                <hr class="my-2" style="border-color: #ddd;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Barra de "Es noticia" -->
+            <div class="bg-light border py-0 px-3 mb-4">
+                <div class="d-flex flex-wrap align-items-center">
+                    <span class="font-weight-bold mr-3 text-dark">Es noticia:</span>
+                    <a href="#" class="text-dark mr-3" style="text-decoration: none; font-size: 0.9rem;">Mercado de
+                        fichajes</a>
+                    <a href="#" class="text-dark mr-3" style="text-decoration: none; font-size: 0.9rem;">Rodrigo</a>
+                    <a href="#" class="text-dark mr-3" style="text-decoration: none; font-size: 0.9rem;">Fernando
+                        Alonso</a>
+                    <a href="#" class="text-dark mr-3" style="text-decoration: none; font-size: 0.9rem;">Lewandowski</a>
+                    <a href="#" class="text-dark mr-3" style="text-decoration: none; font-size: 0.9rem;">Usain Bolt</a>
+                    <a href="#" class="text-dark mr-3" style="text-decoration: none; font-size: 0.9rem;">Donald
+                        Trump</a>
+                    <a href="#" class="text-dark" style="text-decoration: none; font-size: 0.9rem;">Calendario Liga</a>
+                </div>
+            </div>
+
+            <!-- Segunda fila de noticias -->
+            <div class="row mb-4">
+                <!-- Primera fila de noticias secundarias -->
+                <div class="col-lg-5 col-md-5 mb-3">
+                    <div class="row">
+                        <div class="col-4">
+                            <img src="/IMG/hqdefault.jpg" class="img-fluid" alt="LaLiga Santander"
+                                style="width: 100%; height: 80px; object-fit: cover;">
+                        </div>
+                        <div class="col-8">
+                            <span class="badge px-2 py-1 mb-1"
+                                style="background-color: #007bff; color: white; font-size: 0.6rem; font-weight: bold;">LALIGA
+                                SANTANDER</span>
+                            <h6 class="font-weight-bold mb-1" style="font-size: 0.9rem; line-height: 1.2;">
+                                ¿Qué equipos y qué jugadores estuvieron en la reunión de la AFE?
+                            </h6>
+                            <div class="d-flex align-items-center mt-2">
+                                <span class="text-muted" style="font-size: 0.75rem;">ROCÍO GUEVARA SEVILLA</span>
+                                <span class="text-danger ml-2" style="font-size: 0.75rem;">📄 84</span>
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="my-2" style="border-color: #ddd;">
+                </div>
+
+                <!-- Espacio en el medio -->
+                <div class="col-lg-2 col-md-2"></div>
+
+                <div class="col-lg-5 col-md-5 mb-3">
+                    <div class="row">
+                        <div class="col-4">
+                            <img src="IMG/15349594824613.jpg" class="img-fluid" alt="Sevilla FC"
+                                style="width: 100%; height: 80px; object-fit: cover;">
+                        </div>
+                        <div class="col-8">
+                            <span class="badge px-2 py-1 mb-1"
+                                style="background-color: #17a2b8; color: white; font-size: 0.6rem; font-weight: bold;">SEVILLA
+                                FC</span>
+                            <h6 class="font-weight-bold mb-1" style="font-size: 0.9rem; line-height: 1.2;">
+                                Draxler y Martial, nombres 'top' en la recta final del mercado
+                            </h6>
+                            <div class="mt-2">
+                                <span class="text-muted" style="font-size: 0.75rem;">ROCÍO GUEVARA SEVILLA</span>
+                                <span class="text-danger ml-2" style="font-size: 0.75rem;">📄 84</span>
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="my-2" style="border-color: #ddd;">
+                </div>
+            </div>
+
+            <!-- Segunda fila de noticias secundarias -->
+            <div class="row mb-4">
+                <div class="col-lg-4 col-md-4 mb-3">
+                    <div class="card border-0">
+                        <div class="position-relative">
+                            <img src="/IMG/lunin_ante_la_juventus.jpg" class="card-img-top" alt="Real Madrid"
+                                style="height: 180px; object-fit: cover; border-radius: 0;">
+                            <span class="badge position-absolute px-2 py-1"
+                                style="top: 8px; left: 8px; background-color: #007bff; color: white; font-size: 0.7rem; font-weight: bold;">REAL
+                                MADRID</span>
+                        </div>
+                        <div class="card-body p-3">
+                            <h6 class="card-title font-weight-bold mb-0 text-dark"
+                                style="font-size: 1rem; line-height: 1.2;">
+                                Lunin, muy cerca de irse cedido al Leganés
+                            </h6>
+                        </div>
+                    </div>
+                    <hr class="my-2" style="border-color: #ddd;">
+                </div>
+
+                <div class="col-lg-4 col-md-4 mb-3">
+                    <div class="card border-0">
+                        <div class="position-relative">
+                            <img src="IMG/gettyimages-1020485662-320x180.jpg" class="card-img-top" alt="Real Madrid"
+                                style="height: 180px; object-fit: cover; border-radius: 0;">
+                            <span class="badge position-absolute px-2 py-1"
+                                style="top: 8px; left: 8px; background-color: #007bff; color: white; font-size: 0.7rem; font-weight: bold;">REAL
+                                MADRID</span>
+                        </div>
+                        <div class="card-body p-3">
+                            <h6 class="card-title font-weight-bold mb-0 text-dark"
+                                style="font-size: 1rem; line-height: 1.2;">
+                                Algo pasa con Rodrigo
+                            </h6>
+                        </div>
+                    </div>
+                    <hr class="my-2" style="border-color: #ddd;">
+                </div>
+
+                <!-- Espacio a la derecha para la tercera imagen -->
+                <div class="col-lg-4 col-md-4 mb-3"></div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-4 mt-auto">
+        <div class="container">
+            <div class="row">
+                <!-- Marca Column -->
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h6 class="text-white font-weight-bold mb-3">Marca</h6>
+                    <ul class="list-unstyled mb-0">
+                        <li class="mb-1"><a href="#" class="text-light text-decoration-none footer-links">Última hora</a></li>
+                        <li class="mb-1"><a href="#" class="text-light text-decoration-none footer-links">Apuestas Deportivas</a></li>
+                        <li class="mb-1"><a href="#" class="text-light text-decoration-none footer-links">Clasificación LaLiga</a></li>
+                        <li class="mb-1"><a href="#" class="text-light text-decoration-none footer-links">Resultados en directo</a></li>
+                        <li class="mb-1"><a href="#" class="text-light text-decoration-none footer-links">Hemeroteca Marca</a></li>
+                        <li class="mb-1"><a href="#" class="text-light text-decoration-none footer-links">Marca en Orbit</a></li>
+                        <li class="mb-1"><a href="#" class="text-light text-decoration-none footer-links">Marca Madrid</a></li>
+                        <li class="mb-1"><a href="#" class="text-light text-decoration-none footer-links">Zona Marca</a></li>
+                    </ul>
+                </div>
+
+                <!-- Ocio y Medio Column -->
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h6 class="text-white font-weight-bold mb-3">Ocio y Medio</h6>
+                    <ul class="list-unstyled mb-0">
+                        <li class="mb-1"><a href="#" class="text-light text-decoration-none footer-links">Tiramillas</a></li>
+                        <li class="mb-1"><a href="#" class="text-light text-decoration-none footer-links">Marca Moda</a></li>
+                        <li class="mb-1"><a href="#" class="text-light text-decoration-none footer-links">BULEVARD Magazine</a></li>
+                        <li class="mb-1"><a href="#" class="text-light text-decoration-none footer-links">Actualidad</a></li>
+                        <li class="mb-1"><a href="#" class="text-light text-decoration-none footer-links">Programación TV</a></li>
+                        <li class="mb-1"><a href="#" class="text-light text-decoration-none footer-links">Marca Eventos</a></li>
+                        <li class="mb-1"><a href="#" class="text-light text-decoration-none footer-links">Mi bebé y yo</a></li>
+                    </ul>
+                </div>
+ 
+                <!-- Unidad Editorial Column -->
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h6 class="text-white font-weight-bold mb-3">Unidad Editorial</h6>
+                    <ul class="list-unstyled mb-0">
+                        <li class="mb-1"><a href="#" class="text-light text-decoration-none footer-links">El Mundo</a></li>
+                        <li class="mb-1"><a href="#" class="text-light text-decoration-none footer-links">Expansión</a></li>
+                        <li class="mb-1"><a href="#" class="text-light text-decoration-none footer-links">CuídatePlus</a></li>
+                        <li class="mb-1"><a href="#" class="text-light text-decoration-none footer-links">Diario Médico</a></li>
+                        <li class="mb-1"><a href="#" class="text-light text-decoration-none footer-links">Correo Farmacéutico</a></li>
+                        <li class="mb-1"><a href="#" class="text-light text-decoration-none footer-links">Suplementos deportivos</a></li>
+                        <li class="mb-1"><a href="#" class="text-light text-decoration-none footer-links">Suscripciones El Mundo</a></li>
+                    </ul>
+                </div>
+
+                <!-- Formación y Empleo Column -->
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h6 class="text-white font-weight-bold mb-3">Formación y Empleo</h6>
+                    <ul class="list-unstyled mb-0">
+                        <li class="mb-1"><a href="#" class="text-light text-decoration-none footer-links">Escuela Unidad Editorial</a></li>
+                        <li class="mb-1"><a href="#" class="text-light text-decoration-none footer-links">Unidad Editorial</a></li>
+                        <li class="mb-1"><a href="#" class="text-light text-decoration-none footer-links">Expansión y Empleo</a></li>
+                        <li class="mb-1"><a href="#" class="text-light text-decoration-none footer-links">CuídatePlus Psicología</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Separator Line -->
+            <hr class="border-secondary my-4">
+
+            <!-- Bottom Footer -->
+            <div class="row">
+                <div class="col-12">
+                    <!-- Links and Copyright -->
+                    <div class="d-flex flex-wrap justify-content-center align-items-center mb-3">
+                        <a href="#" class="text-light text-decoration-none mx-2" style="font-size: 0.75rem;">Términos y
+                            condiciones de uso</a>
+                        <span class="text-muted mx-1">|</span>
+                        <a href="#" class="text-light text-decoration-none mx-2" style="font-size: 0.75rem;">Política de
+                            privacidad</a>
+                        <span class="text-muted mx-1">|</span>
+                        <a href="#" class="text-light text-decoration-none mx-2" style="font-size: 0.75rem;">Política de
+                            cookies</a>
+                        <span class="text-muted mx-1">|</span>
+                        <a href="#" class="text-light text-decoration-none mx-2" style="font-size: 0.75rem;">Certificado
+                            por OJD</a>
+                        <span class="text-muted mx-1">|</span>
+                        <a href="#" class="text-light text-decoration-none mx-2"
+                            style="font-size: 0.75rem;">Contacto</a>
+                        <span class="text-muted mx-1">|</span>
+                        <a href="#" class="text-light text-decoration-none mx-2"
+                            style="font-size: 0.75rem;">Publicidad</a>
+                        <span class="text-muted mx-1">|</span>
+                        <a href="#" class="text-light text-decoration-none mx-2" style="font-size: 0.75rem;">Ayuda</a>
+                        <span class="text-muted mx-1">|</span>
+                        <a href="#" class="text-light text-decoration-none mx-2" style="font-size: 0.75rem;">Nuestro
+                            equipo</a>
+                    </div>
+
+                    <!-- Copyright -->
+                    <div class="text-center mb-3">
+                        <span class="text-muted" style="font-size: 0.75rem;">© Agosto 2024 Unidad Editorial Información
+                            Deportiva, S.L.U. Todos los derechos reservados.</span>
+                    </div>
+
+                    <!-- Social Media Section -->
+                    <div class="text-center">
+                        <span class="text-muted d-block mb-2" style="font-size: 0.8rem;">Síguenos en:</span>
+                        <div class="d-flex justify-content-center">
+                            <a href="#" class="text-light mx-2 d-inline-block social-icon" title="Facebook">
+                                <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                                </svg>
+                            </a>
+                            <a href="#" class="text-light mx-2 d-inline-block social-icon" title="Twitter">
+                                <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z" />
+                                </svg>
+                            </a>
+                            <a href="#" class="text-light mx-2 d-inline-block social-icon" title="Instagram">
+                                <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                                </svg>
+                            </a>
+                            <a href="#" class="text-light mx-2 d-inline-block social-icon" title="YouTube">
+                                <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                                </svg>
+                            </a>
+                            <a href="#" class="text-light mx-2 d-inline-block social-icon" title="RSS">
+                                <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="M6.503 20.752c0 1.794-1.456 3.248-3.251 3.248-1.796 0-3.252-1.454-3.252-3.248 0-1.794 1.456-3.248 3.252-3.248 1.795.001 3.251 1.454 3.251 3.248zm-6.503-12.572v4.811c6.05.062 10.96 4.966 11.022 11.009h4.817c-.062-8.71-7.118-15.758-15.839-15.82zm0-3.368c10.58.046 19.152 8.594 19.183 19.188h4.817c-.03-13.231-10.755-23.954-24-24v4.812z" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+</html>
